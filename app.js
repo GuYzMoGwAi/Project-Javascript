@@ -14,7 +14,7 @@ var dodger = {
 
         game.add.sprite(0, 0, 'ciel');
 
-        this.player = game.add.sprite(300,500, 'troll');
+        this.player = game.add.sprite(100,100, 'troll');
         this.player.anchor.set(0.5)
         game.physics.arcade.enable(this.player);
 
