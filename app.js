@@ -32,9 +32,10 @@ var dodger = {
     },
     update : function() {
         //logique du jeux
-        game.physics.arcade.overlap(this.player, this.YimPhilippes, this.restartGame, null, this); // Permet de créer les collisions (entre le player et les mechants)
-        this.player.body.velocity.x = 0;
-        this.player.body.velocity.y = 0;
+        game.physics.arcade.overlap(this.player, this.YimPhilippes, this.restartGame, null, this); // Permet de créer les collisions (entre le player et les mechan
+        
+        this.player.body.velocity.x = 0; //Permet de remettre velocity x a zero(Update ce recharge 60 f/m.)
+        this.player.body.velocity.y = 0; //Permet de remettre velocity y a zero(Update ce recharge 60 f/m.)
         if (this.cursors.left.isDown) {
             this.player.body.velocity.x = vitesse * -1;
         }
@@ -47,13 +48,13 @@ var dodger = {
         if (this.cursors.down.isDown) {
             this.player.body.velocity.y = vitesse;
         }
-        if (this.player.inworld == false) {
+        if (this.player.inWorld == false) {
             this.restartGame();
         }
     },
     restartGame: function() { 
         game.state.start('dodger');
-        alert('GAME OVER. Merci pour votre participation. Vous pouvez rejouer.'); 
+        alert('GAME OVER. Merci pour votre participation. Vous pouvez rejouer, ou allé voir la documentation !!'); 
     },
     
     ajouterUnMechant() {
