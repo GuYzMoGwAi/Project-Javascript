@@ -6,7 +6,7 @@ var dodger = {
         //Chargement image et le son.
         game.load.image('ciel','ressources/images/ciel.png');
         game.load.image('troll','ressources/images/troll.png');
-        game.load.image('YimPhilippe','ressources/images/YimPhilippe(1).png');
+        game.load.image('YimPhilippe','ressources/images/YimPhilippe.png');
     },
     create: function() {
         //Setup + affichage.
@@ -58,7 +58,7 @@ var dodger = {
     
     ajouterUnMechant() {
         var position = Math.floor(Math.random() * 770) + 1; //Pour arrondir (-50 pour le mechant)
-        var YimPhilippe = game.add.sprite(position, -50, 'YimPhilippe'); //détermine la ou spawn les méchants.
+        var YimPhilippe = game.add.sprite(position, -30, 'YimPhilippe'); //détermine la ou spawn les méchants.
         game.physics.arcade.enable(YimPhilippe);
         YimPhilippe.body.gravity.y = 200;
 
