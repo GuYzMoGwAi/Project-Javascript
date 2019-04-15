@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 800);
+var game = new Phaser.Game(800, 800); //Taille du plateau.
 var vitesse = 600;
 
 var dodger = {
@@ -15,7 +15,7 @@ var dodger = {
         game.add.sprite(0, 0, 'ciel');
 
         this.player = game.add.sprite(400, 600, 'troll'); //Emplacement du player
-        this.player.anchor.set(0.5)
+        this.player.anchor.set(0.5) // Pour centrer au milieu de l'image.
         game.physics.arcade.enable(this.player);
 
         this.cursors = game.input.keyboard.createCursorKeys();
@@ -40,7 +40,7 @@ var dodger = {
         this.player.body.velocity.x = 0; //Permet de remettre velocity x a zero(Update ce recharge 60 f/m.)
         this.player.body.velocity.y = 0; //Permet de remettre velocity y a zero(Update ce recharge 60 f/m.)
         if (this.cursors.left.isDown) {
-            this.player.body.velocity.x = vitesse * -1;
+            this.player.body.velocity.x = vitesse * -1; 
         }
         if (this.cursors.right.isDown) {
             this.player.body.velocity.x = vitesse;
@@ -57,7 +57,7 @@ var dodger = {
     },
     restartGame: function () {
         game.state.start('dodger');
-        alert('GAME OVER. Merci pour votre participation. Vous pouvez rejouer, ou aller voir la DOC !!');
+        alert('\t\t\t\t\t\tGAME OVER.\n\n Merci pour votre participation. Vous pouvez rejouer, ou aller voir la DOC !!');
     },
 
     ajouterUnMechant() {
