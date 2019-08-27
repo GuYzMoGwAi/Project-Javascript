@@ -7,8 +7,7 @@ var dodger = {
         game.load.image('ciel', 'ressources/images/ciel.png');
         game.load.image('troll', 'ressources/images/troll.png');
         game.load.image('YimPhilippe', 'ressources/images/YimPhilippe.png');
-        game.load.audio('Better', ['ressources/audio/Better.mp3']);
-        game.load.audio('Blusy', ['ressources/audio/Blusy.mp3']);
+
     },
     create: function () {
         //Setup + affichage.
