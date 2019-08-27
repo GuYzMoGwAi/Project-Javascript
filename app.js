@@ -7,18 +7,13 @@ var dodger = {
         game.load.image('ciel', 'ressources/images/ciel.png');
         game.load.image('troll', 'ressources/images/troll.png');
         game.load.image('YimPhilippe', 'ressources/images/YimPhilippe.png');
-        game.load.audio('bass', 'assets/audio/tech/bass.mp3');
-        game.load.audio('drums', 'assets/audio/tech/drums.mp3');
-        game.load.audio('percussion', 'assets/audio/tech/percussion.mp3');
-        game.load.audio('synth1', 'assets/audio/tech/synth1.mp3');
-        game.load.audio('synth2', 'assets/audio/tech/synth2.mp3');
-        game.load.audio('top1', 'assets/audio/tech/top1.mp3');
-        game.load.audio('top2', 'assets/audio/tech/top2.mp3');
+        game.load.audio('Better', 'ressources/audio/Better.mp3')
+        game.load.audio('Blusy', 'ressources/audio/Blusy.mp3')
     },
     create: function () {
         //Setup + affichage.
         game.physics.startSystem(Phaser.Physics.ARCADE);
-
+        // Pour appeler l'image.
         game.add.sprite(0, 0, 'ciel');
 
         this.player = game.add.sprite(400, 600, 'troll'); //Emplacement du player
